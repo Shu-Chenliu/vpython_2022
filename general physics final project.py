@@ -10,6 +10,7 @@ ceiling = box(length=0.8, height=0.005, width=0.8, color=color.blue)
 balls=[sphere(radius = size,color=color.red,make_trail=True,trail_type="points",retain=20,pos=vec(L*sin(theta)+N*m*g/k*tan(theta),-L*cos(theta)-N*m*g/k-(N-i)*m*g/k-i*L,0),v=vec(0,0,0))for i in range(N)]
 springs=[cylinder(radius=0.005,pos=vec(L*sin(theta)+N*m*g/k*tan(theta),-L*cos(theta)-N*m*g/k-(N-1-i)*m*g/k-(i-1)*L,0))for i in range(N)]
 springs[0].pos=vec(0,0,0)
+balls[0].v=vec(0,0,0.5)
 ##ball_1 = sphere(radius = size, color=color.red,make_trail=True, trail_type="points", retain=20)
 ##spring_1 = cylinder(radius=0.005) # default pos = vec(0, 0, 0)
 ##ball_1.v = vec(0, 0, 0.5)
