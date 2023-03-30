@@ -1,5 +1,5 @@
 from vpython import *
-import random
+import random 
 import numpy as np
 prob = 0.005
 N, L = 400, 7E-9/2.0
