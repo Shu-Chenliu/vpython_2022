@@ -1,6 +1,7 @@
 from vpython import *
 m=10000
 n=1000
+#this could run a while
 dtheta=2*pi/n
 rl1=0.06/m
 rx1=0
