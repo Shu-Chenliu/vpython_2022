@@ -23,11 +23,6 @@ maxI = np.amax(Inte)
 for i in range(N):
     for j in range(N):
         box(canvas=scene1,pos=vector(i*dx,j*dy,0),length=dx,height=dy,width=dx,color=vector(Inte[i,j]/maxI,Inte[i,j]/maxI,Inte[i,j]/maxI))
-Inte = abs(E_field)
-maxI = np.amax(Inte)
-for i in range(N):
-    for j in range(N):
-        box(canvas=scene2,pos=vector(i*dx,j*dy,0),length=dx,height=dy,width=dx,color=vector(Inte[i,j]/maxI,Inte[i,j]/maxI,Inte[i,j]/maxI))
 b=int(N/2)
 c=b
 findmin=0
@@ -39,4 +34,10 @@ while True:
         b+=1
 theta=(b-N/2)*0.02*pi/N
 print("experimental theta=",theta)
+Inte = abs(E_field)
+maxI = np.amax(Inte)
+for i in range(N):
+    for j in range(N):
+        box(canvas=scene2,pos=vector(i*dx,j*dy,0),length=dx,height=dy,width=dx,color=vector(Inte[i,j]/maxI,Inte[i,j]/maxI,Inte[i,j]/maxI))
+
 print("theoretical theta=",1.22*lamda/d)
